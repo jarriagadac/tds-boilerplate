@@ -10,4 +10,4 @@ install:
 	# librerías para dev
 	sudo apt -y install nodejs npm postgresql postgresql-contrib postgresql-client
 	pip install --upgrade pip
-	pip install -r requirements.txt
+	pip install -r requirements/base.txt -r requirements/dev.txt

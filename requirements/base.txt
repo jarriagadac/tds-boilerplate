@@ -1,0 +1,12 @@
+Django==5.2.4
+djangorestframework==3.16.0
+django-debug-toolbar==5.2.0
+whitenoise==6.9.0
+
+django-htmx==1.23.2
+django-tinymce==4.1.0
+tqdm==4.67.1
+rich==14.0.0
+dpath==2.2.0
+pillow==11.3.0
+beautifulsoup4==4.13.4
