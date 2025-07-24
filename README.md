@@ -1,7 +1,3 @@
-BREAK HASTA LAS 20:00!!!
-
-
-
 # Taller de Software
 
 
