@@ -18,7 +18,7 @@ dumpdata:
 	python manage.py dumpdata polls --indent 2 > fixtures/polls.json
 
 precommit:
-	isort . --skip ./sso --settings-path pyproject.toml
+	isort . --settings-path pyproject.toml
 	black . --config pyproject.toml
 	flake8 . --config pyproject.toml
 	djlint . --reformat
