@@ -4,7 +4,6 @@ from .models import Choice, Question
 
 
 class ChoiceSerializer(serializers.ModelSerializer):
-    # unable to resolve type hint for function "was_published_recently". Consider using a type hint or @extend_schema_field. Defaulting to string.
     was_published_recently: bool
 
     class Meta:
