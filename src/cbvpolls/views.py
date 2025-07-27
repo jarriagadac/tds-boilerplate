@@ -8,6 +8,7 @@ from polls.models import Choice, Question
 
 class IndexView(generic.ListView):
     context_object_name = "latest_question_list"
+    template_name = "cbvpolls/question_list.html"
 
     def get_queryset(self):
         """Return the last five published questions."""
@@ -16,12 +17,12 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Question
-    template_name = "polls/detail.html"
+    template_name = "cbvpolls/detail.html"
 
 
 class ResultsView(generic.DetailView):
     model = Question
-    template_name = "polls/results.html"
+    template_name = "cbvpolls/results.html"
 
 
 def vote(request, question_id):
@@ -32,7 +33,7 @@ def vote(request, question_id):
         # Redisplay the question voting form.
         return render(
             request,
-            "polls/detail.html",
+            "cbvpolls/detail.html",
             {
                 "question": question,
                 "error_message": "You didn't select a choice.",
