@@ -1,14 +1,16 @@
-# Taller de Software
+# DIS-DCC-UdeCh-TDS.2025
 
-Esta plantilla fue creada para el Taller de Software del Diploma de Postítulo en Ingeniería de Software. Fue creada para ser utilizada como base para la construcción de los proyectos de los Equipos. Incluye la implementación completa del tutorial de django, además de una versión del mismo implementada usando class based views y endpoints de API utilizando Django RestFramework.
+Esta plantilla fue construida para el Taller de Software del Diploma de Postítulo en Ingeniería de Software utilizando el framework Django 5.x siguiendo algunas de las prácticas recomendadas en Two Scoops of Django 3.x. 
+
+La documentación oficial de Django en conjunto con las buenas prácticas documentadas en el libro son recomendadas antes de modificar este proyecto.
+
+Incluye la implementación completa del tutorial de django, además de una versión del mismo implementada usando class based views y endpoints de API utilizando Django RestFramework.
+
+Puede ser utilizada como base para la construcción de los proyectos de los Equipos. 
 
 ## Requisitos
 
-Para poder utilizar esta plantilla se recomienda tener instalado: 
-
-- [Docker](https://docs.docker.com/desktop/) o [Podman](https://podman-desktop.io/).
-- [VisualStudio Code](https://code.visualstudio.com/)
-- [GitHub Desktop](https://desktop.github.com/download/)
+Para poder utilizar esta plantilla se recomienda tener instalado: [Docker](https://docs.docker.com/desktop/) o [Podman](https://podman-desktop.io/), [VisualStudio Code](https://code.visualstudio.com/) y [GitHub Desktop](https://desktop.github.com/download/).
 
 Una vez clonado el repositorio, al abrirlo con VSCode, este sugerirá el uso de DevContainers y la instalación de las extensiones en la configuración incluida.
 
@@ -51,6 +53,6 @@ Estos archivo automatizan tareas comunes para el desarrollo y mantenimiento del 
 
 ## Enlaces
 
-- Python / Django: [Python 3.13](https://docs.python.org/3.13/), [Django 5.2](https://docs.djangoproject.com/en/5.2/)
+- Python / Django: [Python 3.13](https://docs.python.org/3.13/), [Django 5.2](https://docs.djangoproject.com/en/5.2/), [WhiteNoise](https://whitenoise.readthedocs.io/en/stable/django.html), [DRF](https://www.django-rest-framework.org/), [DRF-Spectacular](https://drf-spectacular.readthedocs.io/)
 - HTML / CSS / JS: [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/), [Bootstrap Icons](https://icons.getbootstrap.com/), [HTMX](https://htmx.org/docs/)
-- Tutoriales: [Django Polls](https://docs.djangoproject.com/en/5.2/intro/tutorial01/)
+- Tutoriales: [Django Polls](https://docs.djangoproject.com/en/5.2/intro/tutorial01/), [DRF](https://www.django-rest-framework.org/tutorial/quickstart/)
