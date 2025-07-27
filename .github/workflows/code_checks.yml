@@ -26,4 +26,4 @@ jobs:
 
     - name: Run Flake8
       run: |
-        flake8 ./src --config ./src/.flake8
+        flake8 ./src --config ./src/.pyproject.toml
