@@ -6,3 +6,5 @@ isort
 pylint
 pygraphviz
 djlint
+pyparsing
+pydot
