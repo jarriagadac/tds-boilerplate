@@ -1,5 +1,5 @@
 run:
-	python manage.py runserver 0.0.0.0:8000
+	python manage.py runserver 0.0.0.0:$(HOST_BACKEND_PORT)
 
 migrations:
 	python manage.py makemigrations
@@ -12,11 +12,9 @@ superuser:
 	python manage.py createsuperuser
 
 loaddata:
-	python manage.py loaddata fixtures/users.json
 	python manage.py loaddata fixtures/polls.json
 
 dumpdata:
-	python manage.py dumpdata users.customuser --indent 2 > fixtures/users.json
 	python manage.py dumpdata polls --indent 2 > fixtures/polls.json
 
 precommit:

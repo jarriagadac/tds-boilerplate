@@ -28,9 +28,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("hijack/release/", CustomReleaseUserView.as_view(), name="release"),
     path("hijack/", include("hijack.urls")),
-    path("polls/", include("polls.urls")),
+    path("", include("polls.urls")),
     path("cbvpolls/", include("cbvpolls.urls")),
-    path("", include("demo.urls")),
     path("info", infoView, name="info"),
 ]
 

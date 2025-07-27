@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "django.contrib.humanize",
 ]
@@ -51,20 +52,13 @@ INSTALLED_APPS += [
 
 # local apps
 INSTALLED_APPS += [
-    "demo",
-    "polls.apps.PollsConfig",
-    "cbvpolls.apps.CbvpollsConfig",
-]
-
-# Local
-INSTALLED_APPS += [
-    "demo",
     "polls.apps.PollsConfig",
     "cbvpolls.apps.CbvpollsConfig",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -91,7 +85,6 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "common.context_processors.context_vars",
             ],
             "builtins": ["template_partials.templatetags.partials"],
         },
@@ -144,12 +137,8 @@ DATE_FORMAT = "d/m/Y"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-STATIC_URL = "static/"
-STATIC_ROOT = get_env_variable("DJANGO_STATIC_ROOT", "/static")
-STATICFILES_DIRS = "staticfiles"
-
-MEDIA_ROOT = get_env_variable("DJANGO_MEDIA_ROOT", "/media")
-MEDIA_URL = get_env_variable("DJANGO_MEDIA_URL", "media/")
+STATIC_URL = "/static/"
+STATICFILES_DIRS = ("staticfiles",)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -207,13 +196,11 @@ SPECTACULAR_SETTINGS = {
 }
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"https:\/\/(.)*(dcc|ing).uchile.cl",
     r"http:\/\/localhost(.)*",
 ]
 
-AUTH_USER_MODEL = "users.CustomUser"
-
-# UCAMPUS
-UCAMPUS_URL = get_env_variable("UCAMPUS_URL")
-UCAMPUS_USERNAME = get_env_variable("UCAMPUS_USERNAME")
-UCAMPUS_PASSWORD = get_env_variable("UCAMPUS_PASSWORD")
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}

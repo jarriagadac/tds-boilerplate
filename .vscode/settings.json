@@ -9,10 +9,6 @@
         "--settings-path", "src/pyproject.toml"
     ],
     "djlint.configuration": "src/.djlintrc",
-    "flake8.args": [
-        "--config", "src/pyproject.toml"
-    ],
-    "pylint.args": [
-        "--rcfile", "src/pyproject.toml"
-    ],
+    "flake8.cwd": "${workspaceFolder}/src",
+    "pylint.cwd": "${workspaceFolder}/src",
 }
