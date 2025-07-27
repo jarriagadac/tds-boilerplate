@@ -1,4 +1,16 @@
-{% for q in questions %}
-  <h2>{{ q.question_text }}</h2>
-  <p>Published on: {{ q.pub_date }}</p>
-{% endfor %}
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if latest_question_list %}
+        <ul>
+            {% for question in latest_question_list %}
+                <li>
+                    <a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+{% endblock content %}
