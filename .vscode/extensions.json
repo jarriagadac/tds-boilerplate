@@ -23,5 +23,6 @@
         "ms-python.pylint",
         "ms-python.isort",
         "ms-vscode.makefile-tools",
+        "monosans.djlint",
     ]
 }
